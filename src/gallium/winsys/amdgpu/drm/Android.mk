@@ -41,6 +41,8 @@ LOCAL_MODULE := libmesa_winsys_amdgpu
 
 $(call mesa-build-with-llvm)
 
+#LOCAL_STATIC_LIBRARIES += libLLVMCore
+
 include $(GALLIUM_COMMON_MK)
 include $(BUILD_STATIC_LIBRARY)
 

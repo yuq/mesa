@@ -38,9 +38,9 @@ LOCAL_C_INCLUDES := \
 	$(MESA_TOP)/src/amd/common \
 	$(call generated-sources-dir-for,STATIC_LIBRARIES,libmesa_amd_common,,)/common
 
-LOCAL_STATIC_LIBRARIES := libmesa_amd_common
+LOCAL_STATIC_LIBRARIES := libmesa_amd_common libLLVM50
 
-LOCAL_SHARED_LIBRARIES := libdrm_radeon libLLVM50
+LOCAL_SHARED_LIBRARIES := libdrm_radeon
 LOCAL_MODULE := libmesa_pipe_radeonsi
 
 $(call mesa-build-with-llvm)

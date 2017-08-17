@@ -96,9 +96,9 @@ define mesa-build-with-llvm
     $(eval LOCAL_SHARED_LIBRARIES += libLLVM) \
     $(eval LOCAL_C_INCLUDES += external/llvm/include external/llvm/device/include),) \
   $(if $(filter 7,$(MESA_ANDROID_MAJOR_VERSION)), \
-    $(eval LOCAL_CFLAGS += -DHAVE_LLVM=0x0308 -DMESA_LLVM_VERSION_PATCH=0) \
-    $(eval LOCAL_SHARED_LIBRARIES += libLLVM) \
-    $(eval LOCAL_C_INCLUDES += external/llvm/include external/llvm/device/include),) \
+    $(eval LOCAL_CFLAGS += -DHAVE_LLVM=0x0500 -DMESA_LLVM_VERSION_PATCH=0) \
+    $(eval LOCAL_SHARED_LIBRARIES += libLLVM50) \
+    $(eval LOCAL_C_INCLUDES += external/llvm50/include external/llvm50/device/include),) \
   $(if $(filter O,$(MESA_ANDROID_MAJOR_VERSION)), \
     $(eval LOCAL_CFLAGS += -DHAVE_LLVM=0x0309 -DMESA_LLVM_VERSION_PATCH=0) \
     $(eval LOCAL_SHARED_LIBRARIES += libLLVM) \
